@@ -12,6 +12,7 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [{
+    name: 'inicio',
     path: '/',
     component: Inicio
   }, {
@@ -19,9 +20,21 @@ export default new Router({
     component: Usuario,
     props: true,
     children: [
-      { path: '', component: UsuarioLista },
-      { path: ':id', component: UsuarioDetalhe, props: true },
-      { path: ':id/editar', component: UsuarioEditar, props: true },
+      { 
+        path: '', 
+        component: UsuarioLista
+      },
+      { 
+        path: ':id', 
+        component: UsuarioDetalhe, 
+        props: true
+      },
+      { 
+        path: ':id/editar', 
+        component: UsuarioEditar, 
+        props: true,
+        name: 'editarUsuario'
+      },
     ],
   }]
 })
