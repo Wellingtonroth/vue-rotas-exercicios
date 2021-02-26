@@ -6,9 +6,14 @@
     <router-link 
       tag="button" 
       primario 
-      :to="{ 
+      :to="{
         name: 'editarUsuario', 
-        params: { id } }"
+        params: { id },
+        query: { 
+          completo: true, 
+          lingua: 'pt' 
+          } 
+      }"
     >
     <!-- Formas de usar o to="" -->
     <!-- :to="`/usuario/${id}/editar`" -->
