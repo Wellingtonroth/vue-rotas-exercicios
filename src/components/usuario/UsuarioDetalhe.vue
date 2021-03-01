@@ -12,7 +12,8 @@
         query: { 
           completo: true, 
           lingua: 'pt' 
-          } 
+          },
+        hash: '#rodape'
       }"
     >
     <!-- Formas de usar o to="" -->
