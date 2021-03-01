@@ -39,5 +39,8 @@ export default new Router({
   }, {
     path: '/redirecionar',
     redirect: '/usuario'
+  }, {
+    path: '*', /*Pega todas as paginas que não existem e redireciona para o '/' */
+    redirect: '/'
   }]
 })
