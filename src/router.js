@@ -32,21 +32,12 @@ export default new Router({
     },
     props: true,
     children: [
-      {  
-        path: '', 
-        component: UsuarioLista
-      },
-      { 
-        path: ':id', 
-        component: UsuarioDetalhe, 
-        props: true
-      },
-      { 
-        path: ':id/editar', 
-        component: UsuarioEditar, 
-        props: true,
-        name: 'editarUsuario'
-      },
-    ],
+      {  path: '', component: UsuarioLista },
+      { path: ':id', component: UsuarioDetalhe, props: true },
+      { path: ':id/editar', component: UsuarioEditar, props: true, name: 'editarUsuario' },
+    ]
+  }, {
+    path: '/redirecionar',
+    redirect: '/usuario'
   }]
 })
